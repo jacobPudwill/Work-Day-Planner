@@ -41,8 +41,6 @@ $(function () {
     timeBlockDiv.append(saveButton);
 
     $('.container-lg').append(timeBlockDiv);
-    console.log(timeBlockDiv);
-    
   }
 
   for (let i = 1; i <= 5; i++){
@@ -78,8 +76,6 @@ $(function () {
     timeBlockDiv.append(saveButton);
 
     $('.container-lg').append(timeBlockDiv);
-    console.log(timeBlockDiv);
-    
   }
 
   // TODO: Add a listener for click events on the save button. This code should
@@ -95,10 +91,10 @@ $(function () {
     timeBlock = timeBlocks.eq(i);
 
     timeBlock.children('button').on("click", function(){
-      console.log("working");
-      
-    });
+      var currentTimeBlock = $(this).parent();
 
+      localStorage.setItem(currentTimeBlock.attr('id'), currentTimeBlock.children('textarea').val());
+    });
   }
 
   // TODO: Add code to apply the past, present, or future class to each time

@@ -3,6 +3,7 @@
 // in the html.
 var today = dayjs().format('dddd, MMMM D');
 
+
 $(function () {
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
@@ -11,6 +12,19 @@ $(function () {
     // time-block containing the button that was clicked? How might the id be
     // useful when saving the description in local storage?
     //
+    var timeBlocks = $('.container-lg').children();
+
+    for (let i = 0; i < timeBlocks.length; i++){
+      timeBlock = timeBlocks.eq(i);
+      console.log(timeBlock);
+
+      timeBlock.children('button').on("click", function(){
+        console.log("working");
+        
+      });
+
+    }
+
     // TODO: Add code to apply the past, present, or future class to each time
     // block by comparing the id to the current hour. HINTS: How can the id
     // attribute of each time-block be used to conditionally add or remove the

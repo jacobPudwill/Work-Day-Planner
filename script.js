@@ -26,6 +26,7 @@ $(function () {
     var textArea = $('<textarea>');
     textArea.attr('class', 'col-8 col-md-10 description');
     textArea.attr('rows', '3');
+    textArea.text(localStorage.getItem('hour-' + i));
   
     var saveButton = $('<button>');
     saveButton.attr('class', 'btn saveBtn col-2 col-md-1');
@@ -61,6 +62,7 @@ $(function () {
     var textArea = $('<textarea>');
     textArea.attr('class', 'col-8 col-md-10 description');
     textArea.attr('rows', '3');
+    textArea.text(localStorage.getItem('hour-' + i));
   
     var saveButton = $('<button>');
     saveButton.attr('class', 'btn saveBtn col-2 col-md-1');
